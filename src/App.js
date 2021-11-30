@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+import FileUpload from "./components/fileUpload";
+
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <h1>Video Converting Format</h1>
+
+    <p className="info">Please check the output in below mentioned folder once you clicked Convert</p>
+    <div className="text"> 
+    <p>Please upload the .Mp4 file to convert HLS Video </p>  
+</div>
+    <FileUpload />
+    </>
+  )
 }
+
 
 export default App;
