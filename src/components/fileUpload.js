@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Fragment, useState , useEffect} from "react";
+import { Fragment, useState } from "react";
 
 
 
@@ -9,7 +9,7 @@ const FileUpload = () => {
     const [foldername,setFoldername] = useState('');
     const [file,setFile] = useState('');
     const [filename,setFilename] = useState('');
-    const [uploadedFile, setUploadFile] = useState({});
+    //const [uploadedFile, setUploadFile] = useState({});
     const [result,setresult] = useState();
 
     // const folderChange = (e) => {
@@ -46,7 +46,7 @@ const FileUpload = () => {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            const { fileName , filePath } = res.data;
+            //const { fileName , filePath } = res.data;
             //setUploadFile({fileName,filePath});
             
         }catch(err){
