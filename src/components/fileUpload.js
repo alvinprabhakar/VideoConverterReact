@@ -10,7 +10,7 @@ const FileUpload = () => {
     const [file,setFile] = useState('');
     const [filename,setFilename] = useState('');
     //const [uploadedFile, setUploadFile] = useState({});
-    const [result,setresult] = useState();
+    //const [result,setresult] = useState();
 
     // const folderChange = (e) => {
     //     // setFolder(e.target.name);
@@ -41,7 +41,7 @@ const FileUpload = () => {
         formData.append('folder',foldername);
         console.log(formData);
         try{
-            const res = await axios.post('https://alvinprabhakar-videoconverter.herokuapp.com/upload',formData,{
+            await axios.post('https://alvinprabhakar-videoconverter.herokuapp.com/upload',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
