@@ -10,7 +10,7 @@ const FileUpload = () => {
     const [file,setFile] = useState('');
     const [filename,setFilename] = useState('');
     //const [uploadedFile, setUploadFile] = useState({});
-    //const [result,setresult] = useState();
+    const [result,setresult] = useState();
 
     // const folderChange = (e) => {
     //     // setFolder(e.target.name);
@@ -36,6 +36,7 @@ const FileUpload = () => {
         console.log(e);
         const caption= "HLS files will be available in below mentioned folder Shortly .. Please Check !!!"
         setresult(caption); 
+        console.log(result);
         const formData = new FormData();
         formData.append('file',file);
         formData.append('folder',foldername);
