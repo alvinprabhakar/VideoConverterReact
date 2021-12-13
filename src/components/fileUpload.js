@@ -42,7 +42,7 @@ const FileUpload = () => {
         formData.append('folder',foldername);
         console.log(formData);
         try{
-            await axios.post('http://localhost:3001/upload',formData,{
+            await axios.post('https://alvinprabhakar-videoconverter.herokuapp.com/upload',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
