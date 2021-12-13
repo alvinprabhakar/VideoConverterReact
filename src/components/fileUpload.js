@@ -42,11 +42,11 @@ const FileUpload = () => {
         formData.append('folder',foldername);
         console.log(formData);
         try{
-            await axios.post('https://alvinprabhakar-videoconverter.herokuapp.com/upload',formData
-                            // headers: {
-                //     'Content-Type': 'multipart/form-data'
-                // }
-            );
+            await axios.post('https://alvinprabhakar-videoconverter.herokuapp.com/upload',formData,{
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
             //const { fileName , filePath } = res.data;
             //setUploadFile({fileName,filePath});
             
