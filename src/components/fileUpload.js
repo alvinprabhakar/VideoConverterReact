@@ -73,7 +73,7 @@ return (
     <form onSubmit={handleSubmit} className="upload">
     <div className="custom-file mb-4">
     <p>Please Enter the Full Output Path</p>
-    <input type="text" value={foldername} onChange={handlefolderChange} />
+    <input type="text" value={foldername}  className="text-box" onChange={handlefolderChange} />
     <label className='custom-folder-label' htmlFor="customFolder">
         {foldername}
     </label><br /><br/>
@@ -82,7 +82,7 @@ return (
     <label className='custom-file-label' htmlFor="customFile">
         {filename}
     </label><br/>
-    <input type="submit" value="Convert" className="btn btn-primary btn-block mt-4" />
+    <button type="submit" value="Convert" className="btn btn-primary btn-block mt-4">Convert</button> 
     </div>
     </form>
     </Fragment>
