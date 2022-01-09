@@ -42,13 +42,14 @@ const FileUpload = () => {
         formData.append('folder',foldername);
         console.log(formData);
         try{
-            await axios.post('https://alvinprabhakar-videoupload.netlify.app/.netlify/functions/api/upload',formData,{
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
+            // await axios.post('https://alvinprabhakar-videoupload.netlify.app/.netlify/functions/api/upload',formData,{
+            //     headers: {
+            //         'Content-Type': 'multipart/form-data'
+            //     }
+            // });
             //const { fileName , filePath } = res.data;
             //setUploadFile({fileName,filePath});
+            await axios.get('https://alvinprabhakar-videoupload.netlify.app/.netlify/functions/api/upload');
             
         }catch(err){
             if(err.response.status=== 500){
